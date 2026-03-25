@@ -2,7 +2,7 @@
 ## Brief description:
 metaStrain is a method for determining the strain composition of microbial communities based on metagenomic sequencing data.
 
-![外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传](https://img-home.csdnimg.cn/images/20230724024159.png?origin_url=figure%2FFigure1.jpg&pos_id=img-3vLV9LpC-1774431219084)
+![Figure 1. Computational model for strain analysis in microbial communities based on gene arrangements. (A) metaStrain overview. (B) metaStrain model structure. ](figure/Figure1.jpg)
 ## Environment:
 metaStrain is an integrated C++ package that requires a basic **UNIX/Linux environment**. The GCC compiler is required to be installed prior (we have tested successfully on version 8.4.0 and version 11.4.0). More details can be found [here](https://gcc.gnu.org/). Currently, metaStrain does not support Mac or Windows systems. The computational tools required in this pipeline also include [Kraken2](https://github.com/DerrickWood/kraken2), [minimap2](https://github.com/lh3/minimap2), and [vsearch](https://github.com/torognes/vsearch). 
 | Tool | Purpose| Installation |
