@@ -20,7 +20,7 @@ cd /your_path/
 git clone https://github.com/wqlyt17/metaStrain.git
 ```
 ### 2. Quick start (Example) 
-If the required tools, including minimap2 and vsearch, are installed, you can run the commands below to perform strain identification. Detailed usage instructions are provided in the Detailed pipeline of metaStrain section below.
+If the required tools, including minimap2 and vsearch, are installed, you can run the commands below to perform single-species strain identification. Since the species is already known in this example, Kraken2 is not required and strain identification can be performed directly. More detailed instructions on software installation and the complete pipeline are provided in the Detailed pipeline of metaStrain section below.
 
 Download [reference file 1](https://drive.google.com/file/d/1VBtQBlaQMEW-XqOHXjid9IqZ-sNjdTPG/view?usp=drive_link) and [reference file 2](https://drive.google.com/file/d/1MY_e0H5ePxnBwlNpkj9eUI8nnAaF-oKG/view?usp=drive_link) to the reference folder (metaStrain/reference), and download [metagenomic sample](https://drive.google.com/file/d/1e2zYPeqPWmPs9ZJPE9O8m-KuDvfXT1_z/view?usp=drive_link) to the data folder (metaStrain/data).
 ```bash
