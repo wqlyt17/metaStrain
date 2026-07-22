@@ -1,0 +1,17 @@
+name: metastrain
+
+channels:
+  - conda-forge
+  - bioconda
+
+dependencies:
+
+  - python=3.14.2
+
+  - kraken2=2.17.1
+
+  - minimap2=2.30
+  
+  - vsearch=2.30.4
+  
+  
