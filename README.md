@@ -1,8 +1,8 @@
 ﻿# metaStrain
 ## Brief description:
 metaStrain is a method for determining the strain composition of microbial communities based on metagenomic sequencing data.
+![Workflow](figure/Figure1.jpg)
 
-![外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传](https://img-home.csdnimg.cn/images/20230724024159.png?origin_url=figure%2FFigure1.jpg&pos_id=img-5RHQmuOy-1784454046842)
 ## Environment:
 metaStrain is an integrated C++ package with a command-line interface and requires a **UNIX/Linux environment**. The GCC compiler is required for compiling the C++ source code, and metaStrain has been successfully tested with GCC versions 8.4.0 and 11.4.0. Please ensure that GCC is available in your system environment before installation.
 
