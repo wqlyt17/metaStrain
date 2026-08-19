@@ -89,7 +89,7 @@ Example:
 ```text
 Bacteroides_fragilis
 ```
-**Note 2:** ${path}/reference is the directory storing the genome references used for pattern construction. For each species, two files are required: a CDS reference (`species_cds.fa`) and a genome reference (`species.fa`). Users can provide CDS and genome references for specified strains according to their needs to construct their own patterns. Alternatively, the `reference` module of metaStrain provides an automated way to download the required genome and CDS reference files for the specified species from NCBI, as shown below.
+**Note 2:** ${path}/reference is the directory storing the genome references used for pattern construction. For each species, two files are required: a CDS reference (`species_cds.fa`) and a genome reference (`species.fa`). Users can provide CDS and genome references for specified species according to their needs to construct their own patterns. Alternatively, the `reference` module of metaStrain provides an automated way to download the required genome and CDS reference files for the specified species from NCBI, as shown below.
   ```bash
 metastrain reference --species species_pattern.txt --code ${path}/code -o ${path}/reference
 ```
@@ -117,14 +117,13 @@ Running Kraken2 and obtaining the species composition:
 path="/your_path/metaStrain"
 kraken2 --db /your_path/kraken_database ${path}/data/B1.fastq --threads 20 --use-mpa-style --report ${path}/meta_sample.report --output ${path}/meta_sample.txt
 
-metastrain species --kreport meta_sample.report --mode top --value 1 -o species_pattern.txt
+metastrain species --kreport ${path}/meta_sample.report --mode top --value 1 -o ${path}/species_pattern.txt
 ```
+**Note 1:** If strain identification is required only for a specific species, this step can be skipped. Simply replace *Bacteroides_fragilis* with the target species name in the `species_pattern.txt` file.
 
-**Note 1:** For detailed configuration instructions for constructing Kraken2 databse, please refer to the official [Kraken2 GitHub repository](https://github.com/DerrickWood/kraken2).
+**Note 2:** For detailed configuration instructions for constructing Kraken2 database, please refer to the official [Kraken2 GitHub repository](https://github.com/DerrickWood/kraken2).
 
-**Note 2:** /your_path/kraken_database specifies the directory containing the Kraken2 database, while ${path}/data/B1.fastq specifies the path to the input metagenomic sample (here, B1.fastq is used as an example).
-
-**Note 3:** If strain identification is required only for a specific species, this step can be skipped. Simply replace *Bacteroides_fragilis* with the target species name in the `species_pattern.txt` file.
+**Note 3:** /your_path/kraken_database specifies the directory containing the Kraken2 database, while ${path}/data/B1.fastq specifies the path to the input metagenomic sample (here, B1.fastq is used as an example).
 
 **Note 4:** Two species selection modes are supported. `top` selects the top N species according to relative abundance (e.g., `--mode top --value 1` selects the most abundant species), while `threshold` selects all species with relative abundance above the specified cutoff (e.g., `--mode threshold --value 0.1` selects species with relative abundance ≥ 0.1%).
 #### 3.3 Strain identification of a given metagenomic sample
