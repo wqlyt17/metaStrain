@@ -112,6 +112,9 @@ kraken2-build --download-taxonomy --db /your_path/kraken_database
 kraken2-build --download-library bacteria --threads 24 --db /your_path/kraken_database
 kraken2-build --build --threads 24 --db /your_path/kraken_database
 ```
+
+**Note:** We provide a pre-built Kraken2 database generated using the above procedure. Users can also directly download and use the database instead of constructing it from scratch. [Download the pre-built Kraken2 database] (https://drive.google.com/file/d/1FaUVReCvNQpCUO4ITnYQWVR4-3bz24oQ/view?usp=sharing)
+
 Running Kraken2 and obtaining the species composition:
 ```bash
 path="/your_path/metaStrain"
